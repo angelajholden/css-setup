@@ -1,0 +1,68 @@
+/* <button> */
+.sub_menu-button {
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	padding: 0;
+	border: none;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+.sub_menu-button svg {
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	margin: 0 auto;
+	fill: var(--black);
+	transition: fill 300ms ease-in-out;
+}
+
+.open_button,
+.close_button {
+	display: none;
+}
+
+.sub_menu {
+	display: none;
+	padding: 0;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	overflow: visible;
+	white-space: nowrap;
+	background-color: var(--white);
+	border-bottom: 3px solid var(--mint);
+	box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 25%);
+}
+
+.sub_menu .nav_item {
+	justify-content: flex-start;
+}
+
+.sub_menu a {
+	padding: 1rem 1.5rem;
+	border-bottom: 1px solid var(--gray);
+}
+
+.sub_menu .nav_item:last-of-type a {
+	border-bottom: none;
+}
+
+/* Focus, Hover, Active */
+.nav_item:focus-within > a,
+.nav_item:focus-within svg,
+.nav_item:hover > a,
+.nav_item:hover svg,
+.nav_item:active > a,
+.nav_item:active svg {
+	fill: var(--pink);
+	color: var(--pink);
+	text-decoration-color: var(--pink);
+}
+
+.nav_item:focus-within .sub_menu,
+.nav_item:hover .sub_menu,
+.nav_item:active .sub_menu {
+	display: block;
+}

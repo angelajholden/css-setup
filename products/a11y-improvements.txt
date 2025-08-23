@@ -1,0 +1,56 @@
+Here are some additional accessibility improvements you can make to your markup:
+
+Landmarks:
+Use semantic elements (<main>, <nav>, <header>, <footer>, <aside>, <section>) as you already do. This helps screen readers navigate.
+
+Form Controls:
+
+Ensure every input has a visible <label> (you already do for search).
+Use fieldset and legend for groups of checkboxes (you do, but make sure the legend is descriptive and not visually hidden unless you provide another visible label).
+Buttons:
+
+Use type="button" for non-submit buttons (you do for reset).
+Ensure all interactive elements (buttons, links) are reachable by keyboard.
+Product Images:
+
+Make sure every product image has a meaningful alt attribute describing the product.
+Color Contrast:
+
+Check your color contrast for text and interactive elements to meet WCAG AA standards.
+Focus Styles:
+
+Ensure all focusable elements have a visible focus indicator.
+ARIA Live Region (optional):
+
+If your product grid updates dynamically, consider adding aria-live="polite" to the grid container so screen readers announce changes.
+Error Handling:
+
+If filters or search yield no results, display a message like “No products found” and ensure it’s accessible (e.g., use role="status").
+Skip to Content Link (optional):
+
+Add a “Skip to main content” link at the top for keyboard users.
+Accessible View Switcher:
+
+For your grid/list view buttons, use aria-pressed to indicate the active view.
+If you want to implement any of these, let me know which ones and I’ll provide the exact markup or code!
+
+===
+
+Does button type=reset eliminate the need for some of our JavaScript?
+
+<button type="reset"> only works for form controls (like inputs, checkboxes, radios) inside a <form>. It will:
+
+Clear text inputs and textareas.
+Uncheck checkboxes and radios.
+Reset selects to their default value.
+However, it will not:
+
+Reset custom UI elements (like your sort <select> if it’s outside the form, or custom product rendering).
+Trigger your product grid to re-render or re-sort.
+Clear any state managed in JavaScript (like pagination, filtered arrays, etc.).
+So, you still need JavaScript to:
+
+Reset the product grid and filtered results.
+Reset the sort order if it’s not a native form control or needs to trigger a re-sort.
+Clear any other custom UI state.
+If your sort <select> and filters are inside the form, you can use type="reset" for basic input clearing, but you’ll still need JS to update the product display and sort.

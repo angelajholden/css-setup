@@ -1,0 +1,121 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 100%;
+	line-height: 1.65;
+	color: #222;
+	background-color: #fff;
+	display: grid;
+	/* height: 100vh; */
+	grid-template-areas:
+		"header header header"
+		"nav content sidebar"
+		"nav footer footer";
+	grid-template-columns: 1fr 4fr 1fr;
+	/* grid-template-rows: 80px 1fr 70px; */
+}
+
+.header,
+.footer,
+.main,
+.sidebar,
+.nav {
+	padding: 20px;
+	border: 1px pink solid;
+	background-color: steelblue;
+	color: #fff;
+}
+
+header {
+	grid-area: header;
+}
+
+main {
+	grid-area: content;
+}
+
+nav {
+	grid-area: nav;
+}
+
+aside {
+	grid-area: sidebar;
+}
+
+footer {
+	grid-area: footer;
+}
+
+/* CSS Grid */
+.container {
+	display: grid;
+	/* grid-template-columns: repeat(3, 1fr); */
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 10px;
+
+	/* default - just like flexbox */
+	/* align-items is for the container, align-self is for the item */
+	align-items: stretch;
+	/* align-items: end; */
+
+	/* just like flexbox */
+	justify-content: space-around;
+
+	/* column-gap: 10px;
+	row-gap: 10px; */
+	/* grid-auto-rows: minmax(200px, auto); */
+	/* grid-template-rows: repeat(3, 1fr); */
+}
+
+.item {
+	padding: 20px;
+	border: 1px solid var(--pink);
+	background-color: var(--purple);
+	color: var(--white);
+}
+
+/* align-self is for the item, align-items is for the container */
+/* .item:nth-of-type(2) {
+	height: 100px;
+	width: 100px;
+	align-self: center;
+	justify-self: center;
+} */
+
+/* grid-column-start: 1;
+	grid-column-end: 3; */
+/* grid-column: 1 / 3; */
+/* .item:nth-of-type(1) {
+	background-color: var(--black);
+	grid-column: 1 / span 2;
+}
+
+.item:nth-of-type(3) {
+	background-color: var(--green);
+	grid-row: 2 / 4;
+}
+
+.item:nth-of-type(4) {
+	background-color: var(--green);
+	grid-row: 2 / 4;
+} */
+
+@media (max-width: 500px) {
+	.container {
+		grid-template-columns: 1fr;
+	}
+}

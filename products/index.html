@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Category Filter</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<script defer src="../js/script.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			<button class="menu_button open_button" aria-label="Open Menu" aria-controls="mainNav" aria-expanded="false">
+				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M80 160h352M80 256h352M80 352h352" /></svg>
+			</button>
+			<nav id="mainNav" class="navigation">
+				<button class="menu_button close_button" aria-label="Close Menu">
+					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368" /></svg>
+				</button>
+				<ul class="main_menu">
+					<li class="nav_item"><a href="#">Home</a></li>
+					<li class="nav_item"><a href="#">About</a></li>
+					<li class="nav_item"><a href="#">Blog</a></li>
+					<li class="nav_item"><a href="#">Projects</a></li>
+					<li class="nav_item"><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class="main">
+			<div aria-hidden="true" class="background-image"></div>
+			<section class="section">
+				<h1 class="primary-heading">Product Category Filter</h1>
+				<div class="section-grid">
+					<aside class="sidebar-filter">
+						<form id="filters" aria-label="Product Filters">
+							<h3 class="tertiary-heading">
+								<label for="search">Search</label>
+							</h3>
+							<input type="search" id="search" name="search" placeholder="Search by Title" />
+
+							<h3 class="tertiary-heading">Category</h3>
+							<fieldset>
+								<legend class="access-hidden">Category</legend>
+								<ul id="category_filter"></ul>
+							</fieldset>
+
+							<h3 class="tertiary-heading">Colors</h3>
+							<fieldset>
+								<legend class="access-hidden">Colors</legend>
+								<ul id="color_filter"></ul>
+							</fieldset>
+							<button type="button" id="reset_filter">Reset</button>
+						</form>
+					</aside>
+					<div class="product-grid-container">
+						<div class="product_meta">
+							<div class="showing">
+								Showing
+								<span class="first_item"></span>
+								&mdash;
+								<span class="last_item"></span>
+								of
+								<span class="total_items"></span>
+								Results
+							</div>
+							<div class="product_meta-wrap">
+								<div class="sort">
+									<label for="sort_products" id="sort_label">Sort by</label>
+									<select id="sort_products" aria-labelledby="sort_label">
+										<option value="az">A &mdash; Z</option>
+										<option value="za">Z &mdash; A</option>
+										<option value="lowhigh">Low &mdash; High</option>
+										<option value="highlow">High &mdash; Low</option>
+									</select>
+								</div>
+								<div class="view">
+									View
+									<button aria-label="Grid View">
+										<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+											<rect x="48" y="48" width="176" height="176" rx="20" ry="20" fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+											<rect x="288" y="48" width="176" height="176" rx="20" ry="20" fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+											<rect x="48" y="288" width="176" height="176" rx="20" ry="20" fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+											<rect x="288" y="288" width="176" height="176" rx="20" ry="20" fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+										</svg>
+									</button>
+									<button aria-label="List View">
+										<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+											<path fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M160 144h288M160 256h288M160 368h288" />
+											<circle cx="80" cy="144" r="16" fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+											<circle cx="80" cy="256" r="16" fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+											<circle cx="80" cy="368" r="16" fill="none" stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
+										</svg>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div id="products" class="product-grid"></div>
+						<div class="product_meta">
+							<div class="showing">
+								Showing
+								<span class="first_item"></span>
+								&mdash;
+								<span class="last_item"></span>
+								of
+								<span class="total_items"></span>
+								Results
+							</div>
+						</div>
+					</div>
+					<button id="load_more" class="button load_more-button" aria-label="Load More Items">Load More</button>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<p>Copyright &copy; 2025 • Angela J Holden</p>
+		</footer>
+	</body>
+</html>
