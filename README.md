@@ -25,11 +25,11 @@ _This project is part of a free, open-source series focused on helping newer dev
 git clone git@github.com:angelajholden/css-setup.git
 ```
 
----
-
 ### ✅ Live Server
 
 If you're using VS Code, I recommend using the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension to run and view the site in your browser.
+
+---
 
 ## 📜 License
 
