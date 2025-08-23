@@ -42,5 +42,3 @@ This project is released as an open-source, free-to-use static website template 
 -   The visual design of this template is my original work.
 -   The code in this repository is 100% original and written by me.
 -   This project may not be resold, re-uploaded, or redistributed as a template or theme on marketplaces.
-
-If you fork this project, please make sure your use complies with the terms of the ThemeForest license.
