@@ -5,7 +5,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat&logo=javascript&logoColor=black)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-I use this space to prep for streaming and to test new ideas. This is a simple sandbox built with HTML, CSS and vanilla JavaScript.
+I use this space to prep for streaming and test new ideas. This is a simple sandbox built with HTML, CSS and vanilla JavaScript.
 
 _This project is part of a free, open-source series focused on helping newer developers practice HTML, CSS and JavaScript with real-world examples._
 
@@ -13,7 +13,7 @@ _This project is part of a free, open-source series focused on helping newer dev
 
 ## 🔗 See the site live
 
--   [Live demo on Heroku](https://www.heroku.com/)
+-   [Live demo on Github Pages](https://angelajholden.github.io/css-setup/)
 
 ---
 
