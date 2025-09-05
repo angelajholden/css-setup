@@ -1,0 +1,54 @@
+[
+	{
+		"id": "reel01",
+		"video": {
+			"src": "media/reel01.mp4",
+			"poster": "media/reel01.jpg",
+			"captions": "media/reel01.vtt",
+			"duration": 14.2
+		},
+		"author": {
+			"handle": "fiberandkraft",
+			"displayName": "Fiber & Kraft",
+			"avatar": "media/avatar.jpg"
+		},
+		"music": {
+			"title": "Studio Afternoon",
+			"artist": "Angela Holden",
+			"license": "royalty-free"
+		},
+		"meta": {
+			"caption": "Spinning wool into a fine yarn on the wheel.",
+			"hashtags": ["#fiberarts", "#handmade", "#reelsstyle"],
+			"likeCount": 124,
+			"commentCount": 9,
+			"shareUrl": "https://example.com/reel01"
+		}
+	},
+	{
+		"id": "reel02",
+		"video": {
+			"src": "media/reel02.mp4",
+			"poster": "media/reel02.jpg",
+			"captions": "media/reel02.vtt",
+			"duration": 17.5
+		},
+		"author": {
+			"handle": "fiberandkraft",
+			"displayName": "Fiber & Kraft",
+			"avatar": "media/avatar.jpg"
+		},
+		"music": {
+			"title": "Lo-Fi Spin",
+			"artist": "Angela Holden",
+			"license": "royalty-free"
+		},
+		"meta": {
+			"caption": "Soft merino blend — cozy and smooth.",
+			"hashtags": ["#wool", "#fiberlove"],
+			"likeCount": 88,
+			"commentCount": 4,
+			"shareUrl": "https://example.com/reel02"
+		}
+	}
+]
