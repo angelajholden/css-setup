@@ -65,7 +65,7 @@
 		"sale": true,
 		"discount": 10,
 		"category": ["cake", "fruit", "nuts"],
-		"colors": ["red", "green"],
+		"colors": ["red", "green", "pink"],
 		"image": "raspberry-pistachio-cake.jpg",
 		"alt": "Pistachio cake topped with raspberries and icing"
 	},
