@@ -1,3 +1,8 @@
+:root {
+	color-scheme: dark;
+	--black: #000;
+}
+
 html {
 	box-sizing: border-box;
 }
@@ -17,8 +22,46 @@ body {
 	height: 100vh;
 }
 
+/* Scroller */
+.reels {
+	position: fixed;
+	inset: 0;
+	overflow-y: auto;
+	scroll-snap-type: y mandatory;
+	overscroll-behavior: contain;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* Each reel fills the viewport */
+.reel {
+	position: relative;
+	height: 100dvh; /* dynamic viewport for mobile */
+	scroll-snap-align: start;
+	display: grid;
+	place-items: center;
+	background: #000;
+}
+
 video {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	/* Important for iOS */
+	background: #000;
+}
+
+/* Simple overlay mute button for testing */
+.mute {
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+	z-index: 2;
+	border: 0;
+	border-radius: 999px;
+	padding: 0.6rem 0.8rem;
+	font: inherit;
+	background: rgba(255, 255, 255, 0.15);
+	color: #fff;
+	backdrop-filter: blur(6px);
+	cursor: pointer;
 }

@@ -12,6 +12,22 @@
 		<script defer src="reels.js"></script>
 	</head>
 	<body>
-		<video src="media/reel01.mp4" poster="media/reel01.jpg" playsinline autoplay muted loop controls></video>
+		<main class="reels" id="reels">
+			<!-- Hardcoded for sandbox; we'll swap to your JSON next -->
+			<section class="reel" data-id="reel01">
+				<button class="mute" aria-pressed="true" aria-label="Unmute">🔇</button>
+				<video playsinline muted preload="metadata" poster="media/reel01.jpg" src="media/reel01.mp4"></video>
+			</section>
+
+			<section class="reel" data-id="reel02">
+				<button class="mute" aria-pressed="true" aria-label="Unmute">🔇</button>
+				<video playsinline muted preload="metadata" poster="media/reel02.jpg" src="media/reel02.mp4"></video>
+			</section>
+
+			<section class="reel" data-id="reel03">
+				<button class="mute" aria-pressed="true" aria-label="Unmute">🔇</button>
+				<video playsinline muted preload="metadata" poster="media/reel03.jpg" src="media/reel03.mp4"></video>
+			</section>
+		</main>
 	</body>
 </html>
