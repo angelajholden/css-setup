@@ -5,7 +5,7 @@
 			"src": "media/reel01.mp4",
 			"poster": "media/reel01.jpg",
 			"captions": "media/reel01.vtt",
-			"duration": 14.2
+			"duration": 20.0
 		},
 		"author": {
 			"handle": "fiberandkraft",
@@ -13,16 +13,16 @@
 			"avatar": "media/avatar.jpg"
 		},
 		"music": {
-			"title": "Studio Afternoon",
-			"artist": "Angela Holden",
-			"license": "royalty-free"
+			"title": "Just like U",
+			"artist": "The Wildcardz",
+			"license": "Artlist"
 		},
 		"meta": {
-			"caption": "Spinning wool into a fine yarn on the wheel.",
-			"hashtags": ["#fiberarts", "#handmade", "#reelsstyle"],
-			"likeCount": 124,
-			"commentCount": 9,
-			"shareUrl": "https://example.com/reel01"
+			"caption": "Starting the spin with fresh roving — steady rhythm, soft twist.",
+			"hashtags": ["#handspun", "#fiberlove", "#reelsstyle"],
+			"likeCount": 92,
+			"commentCount": 6,
+			"shareUrl": "#"
 		}
 	},
 	{
@@ -31,7 +31,7 @@
 			"src": "media/reel02.mp4",
 			"poster": "media/reel02.jpg",
 			"captions": "media/reel02.vtt",
-			"duration": 17.5
+			"duration": 10.0
 		},
 		"author": {
 			"handle": "fiberandkraft",
@@ -39,16 +39,94 @@
 			"avatar": "media/avatar.jpg"
 		},
 		"music": {
-			"title": "Lo-Fi Spin",
-			"artist": "Angela Holden",
-			"license": "royalty-free"
+			"title": "Go Beat",
+			"artist": "Looking For",
+			"license": "Artlist"
 		},
 		"meta": {
-			"caption": "Soft merino blend — cozy and smooth.",
-			"hashtags": ["#wool", "#fiberlove"],
-			"likeCount": 88,
+			"caption": "Fine merino blend, smooth and silky — this one almost spins itself.",
+			"hashtags": ["#merino", "#spinningwheel", "#yarn"],
+			"likeCount": 146,
+			"commentCount": 15,
+			"shareUrl": "#"
+		}
+	},
+	{
+		"id": "reel03",
+		"video": {
+			"src": "media/reel03.mp4",
+			"poster": "media/reel03.jpg",
+			"captions": "media/reel03.vtt",
+			"duration": 20.0
+		},
+		"author": {
+			"handle": "fiberandkraft",
+			"displayName": "Fiber & Kraft",
+			"avatar": "media/avatar.jpg"
+		},
+		"music": {
+			"title": "Gnossienne No. 5",
+			"artist": "Composer - Erik Satie",
+			"license": "Artlist"
+		},
+		"meta": {
+			"caption": "My first triple ply - smooth and steady.",
+			"hashtags": ["#singles", "#handmade", "#fiberarts"],
+			"likeCount": 78,
 			"commentCount": 4,
-			"shareUrl": "https://example.com/reel02"
+			"shareUrl": "#"
+		}
+	},
+	{
+		"id": "reel04",
+		"video": {
+			"src": "media/reel04.mp4",
+			"poster": "media/reel04.jpg",
+			"captions": "media/reel04.vtt",
+			"duration": 20.0
+		},
+		"author": {
+			"handle": "fiberandkraft",
+			"displayName": "Fiber & Kraft",
+			"avatar": "media/avatar.jpg"
+		},
+		"music": {
+			"title": "Overflow",
+			"artist": "The Wildcardz",
+			"license": "Artlist"
+		},
+		"meta": {
+			"caption": "Plying for a cozy yarn — rustic texture, warm and soft.",
+			"hashtags": ["#yarn", "#cozy", "#creative"],
+			"likeCount": 205,
+			"commentCount": 22,
+			"shareUrl": "#"
+		}
+	},
+	{
+		"id": "reel05",
+		"video": {
+			"src": "media/reel05.mp4",
+			"poster": "media/reel05.jpg",
+			"captions": "media/reel05.vtt",
+			"duration": 18.0
+		},
+		"author": {
+			"handle": "fiberandkraft",
+			"displayName": "Fiber & Kraft",
+			"avatar": "media/avatar.jpg"
+		},
+		"music": {
+			"title": "La routa Di Un Luna Park Will You Dance with Me Remake Version",
+			"artist": "Lalinea",
+			"license": "Artlist"
+		},
+		"meta": {
+			"caption": "Final stretch of the yarn - winding off onto the niddy noddy.",
+			"hashtags": ["#handspinning", "#fiberarts", "#frontendproject"],
+			"likeCount": 119,
+			"commentCount": 9,
+			"shareUrl": "#"
 		}
 	}
 ]
