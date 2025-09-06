@@ -17,9 +17,11 @@ _This project is part of a free, open-source series focused on helping newer dev
 
 ---
 
-## 🎶 Music provided by Artlist.io
+## 🎶 Media & Licensing
 
-Licensed for use by Angela J Holden (Oct 3, 2024)
+-   **Video clips:** Created by Angela J Holden for this project.
+-   **Music:** Licensed through Artlist.io to Angela J Holden (License date: Oct 3, 2024).
+-   Media assets in this repository are provided for demonstration and educational purposes only. They may not be reused or redistributed outside the context of this project.
 
 ---
 
