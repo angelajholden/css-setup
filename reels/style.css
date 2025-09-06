@@ -1,6 +1,7 @@
 :root {
 	color-scheme: dark;
 	--black: #000;
+	---white: #fff;
 }
 
 html {
@@ -15,7 +16,7 @@ html {
 
 body {
 	margin: 0;
-	background: #000;
+	background: var(--black);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -35,11 +36,25 @@ body {
 /* Each reel fills the viewport */
 .reel {
 	position: relative;
-	height: 100dvh; /* dynamic viewport for mobile */
+	height: 100dvh; /* mobile: always fill viewport height */
 	scroll-snap-align: start;
 	display: grid;
 	place-items: center;
-	background: #000;
+	background: var(--black);
+}
+
+/* Desktop refinement */
+@media (min-width: 768px) {
+	.reel {
+		aspect-ratio: 9 / 16;
+		height: auto; /* let aspect-ratio control height */
+		max-height: 100dvh; /* don’t exceed viewport */
+		margin: 0 auto; /* center horizontally */
+	}
+	.reel video {
+		border-radius: 1rem; /* optional: give desktop a card-like look */
+		overflow: hidden;
+	}
 }
 
 video {
@@ -47,7 +62,7 @@ video {
 	height: 100%;
 	object-fit: cover;
 	/* Important for iOS */
-	background: #000;
+	background: var(--black);
 }
 
 /* Simple overlay mute button for testing */
@@ -61,7 +76,7 @@ video {
 	padding: 0.6rem 0.8rem;
 	font: inherit;
 	background: rgba(255, 255, 255, 0.15);
-	color: #fff;
+	color: var(---white);
 	backdrop-filter: blur(6px);
 	cursor: pointer;
 }
