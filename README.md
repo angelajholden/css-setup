@@ -17,6 +17,12 @@ _This project is part of a free, open-source series focused on helping newer dev
 
 ---
 
+## 🎶 Music provided by Artlist.io
+
+Licensed for use by Angela J Holden (Oct 3, 2024)
+
+---
+
 ## 🚀 Quick Start
 
 ### ✅ Git Clone
