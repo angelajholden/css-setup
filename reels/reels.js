@@ -77,6 +77,7 @@ function initReels() {
 			// Wire behavior
 			setupIntersection();
 			setupMuteButtons();
+			setupTapToMute();
 			setupKeyboard();
 			setupPageVisibility();
 
@@ -111,6 +112,20 @@ function initReels() {
 			btn.setAttribute("aria-pressed", String(!globalMuted));
 			btn.setAttribute("aria-label", globalMuted ? "Unmute" : "Mute");
 		});
+	}
+
+	function flashToast(section, on) {
+		let toast = section.querySelector(".toast-audio");
+		if (!toast) {
+			toast = document.createElement("div");
+			toast.className = "toast-audio";
+			toast.setAttribute("aria-live", "polite");
+			section.appendChild(toast);
+		}
+		toast.textContent = on ? "🔊" : "🔇";
+		toast.classList.add("show");
+		clearTimeout(toast._t);
+		toast._t = setTimeout(() => toast.classList.remove("show"), 800);
 	}
 
 	function pauseAll(exceptIdx) {
@@ -159,6 +174,52 @@ function initReels() {
 				// User gesture primes audio; ensure current plays with new state
 				videos[activeIndex]?.play().catch(() => {});
 			});
+		});
+	}
+
+	function setupTapToMute() {
+		// Tune this delay: if a second tap lands within this, treat it as "double tap"
+		const DOUBLE_TAP_MS = 280;
+
+		sections.forEach((sec, idx) => {
+			let lastTapAt = 0;
+			let singleTimer = null;
+
+			// Use pointer events to cover touch + mouse
+			sec.addEventListener(
+				"pointerup",
+				(e) => {
+					// Ignore taps on explicit controls (mute button, like button, etc.)
+					if (e.target.closest('button, a, [role="button"]')) return;
+
+					const now = e.timeStamp;
+					const delta = now - lastTapAt;
+
+					if (delta < DOUBLE_TAP_MS) {
+						// DOUBLE TAP detected — we'll wire "like" here next weekend
+						clearTimeout(singleTimer);
+						lastTapAt = 0;
+
+						// Placeholder: dispatch a custom event you can listen for later
+						// sec.dispatchEvent(new CustomEvent('reel:doubletap', { bubbles: true }));
+
+						return;
+					}
+
+					lastTapAt = now;
+
+					// SINGLE TAP: toggle GLOBAL mute (after a short delay to see if a second tap comes)
+					clearTimeout(singleTimer);
+					singleTimer = setTimeout(() => {
+						globalMuted = !globalMuted;
+						applyGlobalMute();
+						syncMuteButtons();
+						videos[activeIndex]?.play().catch(() => {});
+						flashToast(sec, !globalMuted);
+					}, DOUBLE_TAP_MS);
+				},
+				{ passive: true }
+			);
 		});
 	}
 

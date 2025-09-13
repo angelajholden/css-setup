@@ -80,3 +80,22 @@ video {
 	backdrop-filter: blur(6px);
 	cursor: pointer;
 }
+
+.toast-audio {
+	position: absolute;
+	left: 1rem;
+	top: 1rem;
+	padding: 0.4rem 0.6rem;
+	border-radius: 0.75rem;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	font: 600 14px system-ui;
+	opacity: 0;
+	transform: scale(0.9);
+	transition: opacity 0.15s, transform 0.15s;
+}
+
+.toast-audio.show {
+	opacity: 1;
+	transform: scale(1);
+}
